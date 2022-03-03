@@ -1,0 +1,19 @@
+name: pull vers la main 
+
+on: 
+  pull_request:
+    branches: 
+      - main
+
+
+
+jobs: 
+  
+  Request-info:
+    
+    runs-on: ubuntu-latest
+    steps:
+    - name: recuperation du repo 
+      uses: actions/checkout@v3
+    - name: pull request message
+      run: echo "Je me declenche au pull request"
