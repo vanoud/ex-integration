@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: message à tout les commit
-      run: "Je fais des test"
+      run: echo "Je fais des test"
