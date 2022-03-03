@@ -1,0 +1,13 @@
+
+name: tout les push
+
+on: push 
+
+jobs: 
+  
+  Pusher-info:
+    
+    runs-on: ubuntu-latest
+    steps:
+    - name: message à tout les commit
+      run: "Je fais des test"
