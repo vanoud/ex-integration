@@ -1,20 +1,47 @@
 name: pull vers la main 
 
 on: 
-  pull_request:
-    branches: 
-      - main
-    types: [ closed ]
+  - push
 
 
 
 jobs: 
   
-  Request-info:
+  task1:
     
     runs-on: ubuntu-latest
     steps:
-    - name: recuperation du repo 
+    - name: STEP1
       uses: actions/checkout@v3
     - name: pull request message
-      run: echo "Je deploi l'app"
+      run: echo "step1"
+    - name: STEP2
+      uses: actions/checkout@v3
+    - name: pull request message
+      run: echo "step2"
+    - name: STEP3 
+      uses: actions/checkout@v3
+    - name: pull request message
+      run: echo "step3"
+    
+
+  task2:
+    
+    runs-on: ubuntu-latest
+    steps:
+    - name: STEP1
+      uses: actions/checkout@v3
+    - name: pull request message
+      run: echo "step1"
+    - name: STEP2
+      uses: actions/checkout@v3
+    - name: pull request message
+      run: echo "step2"
+    - name: STEP3 
+      uses: actions/checkout@v3
+    - name: pull request message
+      run: echo "step3"
+    
+
+
+   
