@@ -1,0 +1,35 @@
+#on nome le titre de notre work flow
+name: mon premier test
+#On indique à github quand le declencher 
+# est-ce qu'on le declenche au : 
+#     push
+#     pull
+#     merge
+#     push sur une branche untel
+
+on: 
+  schedule:
+    - cron: '* * * * *'
+
+jobs: 
+
+  #on donne un nom à notre jobs
+  Tests:
+  
+    runs-on: ubuntu-latest
+  #ici on declare les taches que notre processus va executé 
+    steps:
+    - name: recuperation du repo 
+      uses: actions/checkout@v3
+    - name: lister le contenu de mon  step 
+      run: echo "je fais le build"
+    
+  build:
+    runs-on: ubuntu-latest
+    needs: Tests
+    steps:
+      - name: recuperation du repo 
+        uses: actions/checkout@v3
+      - name: lister le contenu de mon step 
+        run: echo "je fais le build"
+
